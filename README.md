@@ -1,8 +1,8 @@
-# CLI lab
+# CLI Lab
 
 ## Description
 
-CLILab is a base CLI helper, allowing you to create full featured CLI using simple, clear API
+CLI Lab is a base CLI helper, allowing you to create full featured CLI using simple, clear API
 
 ## Features
 
@@ -28,11 +28,13 @@ $ ./foo-app.js unicorns --rainbow
 
 ```js
 #!/usr/bin/env node
+
 "use strict";
+
 const cliLab = require("cli-lab");
 const foo = require(".");
 
-const cli = meow(
+const cli = cliLab(
 	`
 	Usage
 	  $ foo <input>
