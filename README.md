@@ -18,6 +18,8 @@ CLI Lab is a base CLI helper, allowing you to create full featured CLI using sim
 
 ```
 $ npm install -g cli-lab
+or
+$ yarn add global cli-lab
 ```
 
 ## Usage
