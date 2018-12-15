@@ -1,0 +1,76 @@
+{
+  "name": "cli-lab",
+  "version": "0.0.1-dev.36",
+  "description": "CLI app helper",
+  "license": "MIT",
+  "repository": "mikeerickson/cli-lab",
+  "author": {
+    "name": "Mike Erickson",
+    "email": "codedungeon@gmail.com"
+  },
+  "engines": {
+    "node": ">=8.6"
+  },
+  "scripts": {
+    "bump:dev": "version-bump cli pre-release:dev",
+    "bump:patch": "version-bump cli patch",
+    "bump:minor": "version-bump cli minor",
+    "lint": "eslint ./**/*.js",
+    "pre-commit": "npm run lint && npm run test && npm run bump:dev",
+    "test": "echo 'Test not created yet...' || true"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "cli",
+    "bin",
+    "util",
+    "utility",
+    "helper",
+    "argv",
+    "command",
+    "line",
+    "cli-lab",
+    "lab",
+    "gunner",
+    "honu",
+    "parser",
+    "option",
+    "flags",
+    "input",
+    "cmd",
+    "console"
+  ],
+  "dependencies": {
+    "camelcase-keys": "^5.0.0",
+    "decamelize-keys": "^1.0.0",
+    "hard-rejection": "^1.0.0",
+    "minimist-options": "^3.0.1",
+    "normalize-package-data": "^2.3.4",
+    "read-pkg-up": "^4.0.0",
+    "redent": "^2.0.0",
+    "trim-newlines": "^2.0.0",
+    "yargs-parser": "^11.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "7.2.1",
+    "@commitlint/config-conventional": "7.1.2",
+    "ava": "^0.25.0",
+    "commitlint": "7.2.1",
+    "eslint": "5.10.0",
+    "eslint-config-prettier": "3.3.0",
+    "eslint-plugin-prettier": "3.0.0",
+    "execa": "^1.0.0",
+    "husky": "1.2.1",
+    "indent-string": "^3.0.0",
+    "prettier": "1.15.3",
+    "xo": "^0.23.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run pre-commit",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
